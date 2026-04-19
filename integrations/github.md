@@ -1,15 +1,30 @@
 # GitHub Integration
 
-Cipher integrates with GitHub as a GitHub App, giving it access to your repositories and pull requests without requiring a personal access token.
+Cipher integrates with GitHub as a GitHub App with OAuth authorization, giving it access to your repositories and pull requests.
 
 ## Installation
 
 1. Go to **Integrations** in the Cipher sidebar
 2. Click **Install GitHub App →**
 3. Choose your GitHub account or organization
-4. Select which repositories Cipher can access (specific repos or all)
+4. Select which repositories Cipher can access (or all repos)
 5. Authorize the OAuth request on the next screen
 6. You'll be redirected back to `cipher-ai.app/integrations` automatically
+
+## Managing Repositories
+
+The Integrations page shows **all repositories** in your GitHub account, not just ones already added to Cipher.
+
+| Badge | Meaning |
+|-------|---------|
+| `SCANNING` | Repo is added and has scheduled scans enabled |
+| `IDLE` | Repo is accessible to Cipher but scheduled scans are off |
+| `NOT ADDED` | Repo is not yet accessible to Cipher |
+
+**Toggling a repo:**
+- If the repo shows `NOT ADDED` — toggling it ON grants Cipher access to that repo and enables weekly scheduled scans in one step. No need to visit GitHub settings.
+- If the repo shows `IDLE` — toggling it ON enables weekly scheduled scans.
+- If the repo shows `SCANNING` — toggling it OFF disables scheduled scans (Cipher retains access).
 
 ## What Cipher Gets Access To
 
