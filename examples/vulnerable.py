@@ -15,3 +15,4 @@ def render_page(template_name):
 
 def run_report(report_id):
     os.system("generate_report.sh " + report_id)
+# trigger rescan
