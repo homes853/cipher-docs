@@ -43,3 +43,10 @@ When a pull request is opened or updated, Cipher:
 ## Disconnecting
 
 Click **Disconnect** on the Integrations page to unlink Cipher from your GitHub account. You can also uninstall the app directly from **github.com/settings/installations**.
+
+## Troubleshooting
+
+- **No PR comment posted**: Ensure the repo has scanning enabled in Cipher Integrations.
+- **403 on webhook**: Verify the webhook secret matches `GITHUB_WEBHOOK_SECRET` in your backend env.
+- **Scan not triggering**: Check that the PR action is `opened`, `synchronize`, or `reopened`.
+- Check DO backend logs if webhook isn't firing
